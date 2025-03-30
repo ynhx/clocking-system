@@ -35,9 +35,10 @@ const LoginSignUp = () => {
             </div>
         </div>
         <div className="Forgot-password">Forgot password ? <span>Click here</span></div>
+
         <div className="submit-container">
-            <div className="Submit">Sign Up</div>
-            <div className="Submit">Login</div>
+            <div className="submit">Sign Up</div>
+            <div className="submit">Login</div>
         </div>
     </div>
   )
