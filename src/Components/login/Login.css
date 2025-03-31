@@ -1,0 +1,97 @@
+body {
+   width: 80%;
+   margin: auto;
+   padding: 0;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue';
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 70px;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px gray;
+}
+
+.login-title {
+   color: blue;
+   padding: 10px;
+   font-size: 2.5em;
+}
+
+.inputs {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.input {
+   display: flex;
+   align-items: center;
+   margin: auto;
+   border-radius: 6px;
+   border: 1px gray solid;
+   position: relative;
+}
+
+.input i {
+   position: relative;
+   left: 10px;
+   color: gray;
+}
+
+.inputs input {
+   height: 40px;
+   width: 300px;
+   background: transparent;
+   border: none;
+   padding-left: 20px;
+   outline: none;
+   color: grey;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue';
+   font-size: 15px;
+}
+
+.forgot-password {
+   padding-bottom: 20px;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue';
+}
+
+.forgot-password a {
+   text-decoration: none;
+   color: blueviolet;
+}
+
+.forgot-password a:hover {
+   text-decoration: underline;
+}
+
+.submit-container {
+    display: flex;
+    gap: 30px;
+    margin: auto;
+    padding: 30px 30px 20px 30px;
+}
+
+.login-button {
+   background-color: blue;
+   color: white;
+   padding: 10px 20px 10px 20px;
+   border-radius: 10px;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue';
+   font-weight: bolder;
+   font-size: 1em;
+   border: none;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.login-button:hover {
+   background-color: blue;
+   transform: scale(1.1);
+   box-shadow: 0px 0px 5px gray;
+}
