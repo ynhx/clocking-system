@@ -1,0 +1,91 @@
+.account-found-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    margin-top: 8vh;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.found-account-recovery-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+.user-details-text {
+
+}
+
+.user-details {
+    align-items: center;
+    text-align: center;
+}
+
+.user-details ul {
+    list-style: none;
+}
+
+.prompt-area {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px gray;
+    font-family: 'Lato';
+    margin-bottom: 16vh;
+}
+
+.prompt-select-text {
+    padding-left: 10px;
+}
+
+.recovery-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.recovery-option {
+    padding: 10px;
+}
+
+.option-text {
+    padding-left: 8px;
+}
+
+.proceed-container {
+    padding: 10px;
+    text-align: end;
+}
+
+.proceed-button {
+    background-color: rgb(122, 36, 101);
+    color: white;
+    border: none;
+    padding: 8px 12px 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.proceed-back-button {
+    margin-right: 10px;
+    padding: 8px 12px 8px 12px;
+    background-color: rgb(214, 208, 208);
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+}
+
+.proceed-button:hover {
+    cursor: pointer;
+    background-color: rgb(90, 33, 76);
+}
+
+.proceed-back-button:hover {
+    background-color: rgb(182, 176, 176);
+    cursor: pointer;
+}
