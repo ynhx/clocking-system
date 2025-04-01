@@ -46,10 +46,10 @@ import './HRDashboard.css';
 
 const HRDashboard = () => {
     const [users, setUsers] = useState([
-        {  email: 'john.doe@example.com', phone: '123-456-7890', studentNumber: 'S12345', role: 'Student' },
-        { email: 'jane.smith@example.com', phone: '987-654-3210', studentNumber: 'S67890', role: 'Supervisor' }
+        { email: 'john.doe@example.com', studentNumber: 'S12345', role: 'Student' },
+        { email: 'jane.smith@example.com', studentNumber: 'S67890', role: 'Supervisor' }
     ]);
-    
+
     const [newUser, setNewUser] = useState({
         email: '',
         studentNumber: '',
@@ -68,7 +68,7 @@ const HRDashboard = () => {
     // Add or update user
     const handleAddUser = (e) => {
         e.preventDefault();
-        if (!newUser.email || !newUser.phone || !newUser.studentNumber || !newUser.role) {
+        if (!newUser.email || !newUser.studentNumber || !newUser.role) {
             alert("All fields are required!");
             return;
         }
@@ -183,6 +183,7 @@ const HRDashboard = () => {
 };
 
 export default HRDashboard;
+
 
 // Removed name and surname columns from the table
 
