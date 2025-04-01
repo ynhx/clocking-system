@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
    width: 80%;
@@ -6,7 +7,7 @@ body {
    padding: 0;
 }
 
-.container {
+.hr-container {
    display: flex;
    flex-direction: column;
    margin: auto;
@@ -16,22 +17,31 @@ body {
    text-align: center;
    border-radius: 20px;
    box-shadow: 0px 0px 15px gray;
-   font-family: 'Poppins';
+   font-family: 'Lato';
 }
 
-.login-title {
-   color: blue;
+.hr-login-title {
    padding: 10px;
    font-size: 2.5em;
+   font-family: 'Montserrat';
 }
 
-.inputs {
+.admin-text {
+   color: gray;
+}
+
+.login-text {
+   color: rgb(68, 65, 65);
+}
+
+.hr-inputs {
    display: flex;
    flex-direction: column;
    gap: 15px;
+   font-family: 'Lato';
 }
 
-.input {
+.hr-input {
    display: flex;
    align-items: center;
    margin: auto;
@@ -41,36 +51,36 @@ body {
    width: 70%;
 }
 
-.input i {
+.hr-input i {
    position: relative;
    left: 10px;
-   color: gray;
+   color: rgb(56, 65, 47);
 }
 
-.profile-container {
+.hr-profile-container {
    position: absolute;
    top: 10px;
    right: 20px;
 }
 
-.profile-icon {
+.hr-profile-icon {
    font-size: 24px;
    color: #333;
    cursor: pointer;
 }
 
-.dropdown-menu {
+.hr-dropdown-menu {
    position: absolute;
    top: 40px;
    right: 0;
    background: white;
    border: 1px solid #ddd;
    border-radius: 5px;
-   width: 150px;
+   width: 140px;
    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-menu a {
+.hr-dropdown-menu a {
    display: flex;
    align-items: center;
    display: block;
@@ -80,15 +90,15 @@ body {
    white-space: nowrap;
 }
 
-.dropdown-menu a:hover {
+.hr-dropdown-menu a:hover {
    background: #f0f0f0;
 }
 
-.dropdown-menu a i {
+.hr-dropdown-menu a i {
    margin-right: 8px;
 }
 
-.inputs input {
+.hr-inputs input {
    height: 40px;
    width: 70%;
    background: transparent;
@@ -99,28 +109,28 @@ body {
    font-size: 15px;
 }
 
-.forgot-password {
+.hr-forgot-password {
    padding-bottom: 20px;
 }
 
-.forgot-password a {
+.hr-forgot-password a {
    text-decoration: none;
-   color: blueviolet;
+   color: rgb(66, 60, 60);
 }
 
-.forgot-password a:hover {
+.hr-forgot-password a:hover {
    text-decoration: underline;
 }
 
-.submit-container {
+.hr-submit-container {
    display: flex;
    gap: 30px;
    margin: auto;
    padding: 30px 30px 20px 30px;
 }
 
-.login-button {
-   background-color: blue;
+.hr-login-button {
+   background-color: gray;
    color: white;
    padding: 10px 20px 10px 20px;
    border-radius: 10px;
@@ -131,8 +141,8 @@ body {
    transition: all 0.3s ease;
 }
 
-.login-button:hover {
-   background-color: blue;
+.hr-login-button:hover {
+   background-color: gray;
    transform: scale(1.1);
    box-shadow: 0px 0px 5px gray;
 }
