@@ -1,0 +1,198 @@
+.admin-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.user-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    font-family: 'Lato', Helvetica, sans-serif;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.user-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(240, 238, 238);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Lato', Helvetica, sans-serif;
+    text-align: center;
+}
+
+.user-form-container.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.hr-dashboard-container {
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.add-user-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 15;
+}
+
+.add-user-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.add-user-buttons-container {
+    align-items: end;
+    text-align: end;
+    padding: 6px;
+    margin-right: 10%;
+}
+
+.add-user-button:hover {
+    background-color: rgb(56, 55, 55);
+}
+
+.add-user-cancel-button {
+    width: 20%;
+    padding: 10px 8px 10px 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.add-user-cancel-button:hover {
+    background-color: rgb(131, 5, 5);
+    cursor: pointer;
+}
+
+.add-user-form-button {
+    width: 20%;
+    margin-left: 10px;
+    padding: 10px 8px 10px 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.add-user-form-button:hover {
+    background-color: rgb(54, 54, 54);
+    cursor: pointer;
+}
+
+.user-form-container h2 {
+    font-size: 1.7em;
+    padding-bottom: 18px;
+}
+
+.user-form-container input,
+.user-form-container select {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.user-form-container input:focus,
+.user-form-container select:focus {
+    outline: none;
+    border-color: gray;
+    box-shadow: 0 0 8px rgba(80, 80, 80, 0.4);
+}
+
+.user-list-container {
+    margin-top: 40px;
+    max-width: fit-content;
+    overflow-x: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: gray;
+    color: white;
+}
+
+.user-table td {
+    background-color: #f9f9f9;
+}
+
+.user-table tr:hover td {
+    background-color: #f1f1f1;
+}
+
+.user-table button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.user-table button:hover {
+    background-color: rgb(58, 57, 57);
+    font-family: 'Lato', Helvetica, sans-serif;
+}

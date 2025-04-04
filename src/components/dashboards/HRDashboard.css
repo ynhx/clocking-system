@@ -22,16 +22,11 @@
 }*/
 /* General Container for the Dashboard */
 /* Styling for Admin Dashboard title */
-/* Admin Title */
-/* Admin Title */
-/* Admin Title */
-/* Admin Title */
 .admin-title {
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #808080; /* Grey text */
 }
 
 /* Container for the dashboard */
@@ -39,8 +34,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f0f0f0; /* Light grey background */
-    color: #808080; /* Grey text */
 }
 
 /* Add User Button Styling */
@@ -50,7 +43,7 @@
 }
 
 .add-user-button {
-    background-color: #808080; /* Medium grey background */
+    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -61,7 +54,7 @@
 }
 
 .add-user-button:hover {
-    background-color: #616161; /* Darker grey on hover */
+    background-color: #45a049;
 }
 
 /* User Form Styling */
@@ -69,35 +62,29 @@
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #e0e0e0; /* Lighter grey background */
+    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #808080; /* Grey text */
 }
 
-.user-form-container input,
-.user-form-container select,
-.user-form-container button {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
+.hr-dashboard-sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
 }
 
 /* Input focus effect */
 .user-form-container input:focus,
 .user-form-container select:focus {
     outline: none;
-    border-color: #808080; /* Grey border on focus */
-    box-shadow: 0 0 8px rgba(128, 128, 128, 0.4);
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
 }
 
 /* Submit Button Styling */
 .user-form-container button[type="submit"] {
-    background-color: #808080; /* Medium grey background */
+    background-color: #4CAF50;
     color: white;
     font-size: 1.1rem;
     cursor: pointer;
@@ -107,12 +94,12 @@
 }
 
 .user-form-container button[type="submit"]:hover {
-    background-color: #616161; /* Darker grey on hover */
+    background-color: #45a049;
 }
 
 /* Cancel Button Styling */
 .user-form-container button[type="button"] {
-    background-color: #808080; /* Medium grey background */
+    background-color: #f44336;
     color: white;
     font-size: 1.1rem;
     cursor: pointer;
@@ -123,7 +110,7 @@
 }
 
 .user-form-container button[type="button"]:hover {
-    background-color: #616161; /* Darker grey on hover */
+    background-color: #e53935;
 }
 
 /* Styling the User List Table */
@@ -149,22 +136,22 @@
 }
 
 .user-table th {
-    background-color: #808080; /* Grey header */
+    background-color: #4CAF50;
     color: white;
 }
 
 .user-table td {
-    background-color: #f2f2f2; /* Lighter grey for table rows */
+    background-color: #f9f9f9;
 }
 
 .user-table tr:hover td {
-    background-color: #e0e0e0; /* Light grey on hover */
+    background-color: #f1f1f1;
 }
 
 .user-table button {
     padding: 8px 16px;
     margin-right: 10px;
-    background-color: #808080; /* Medium grey button */
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
@@ -174,7 +161,7 @@
 }
 
 .user-table button:hover {
-    background-color: #616161; /* Darker grey on hover */
+    background-color: #45a049;
 }
 
 
