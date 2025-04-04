@@ -1,170 +1,66 @@
-/*.hr-dashboard-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.add-user-button {
-    background-color: #305331;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.add-user-button:hover {
-    background-color: #28412a;
-    transform: scale(1.05);
-}*/
-/* General Container for the Dashboard */
-/* Styling for Admin Dashboard title */
-.admin-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-/* Container for the dashboard */
 .hr-dashboard-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
 
-/* Add User Button Styling */
-.add-user-container {
-    text-align: center;
-    margin-bottom: 20px;
+.hr-dashboard-sidebar {
+  width: 250px;
+  background-color: gray;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
-.add-user-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.hr-dashboard-container h1 {
+  font-size: 3em;
+  font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
-.add-user-button:hover {
-    background-color: #45a049;
+.hr-dashboard-sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
 }
 
-/* User Form Styling */
-.user-form-container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.hr-dashboard-sidebar li {
+  margin: 15px 0;
 }
 
-.user-form-container input,
-.user-form-container select,
-.user-form-container button {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
+.hr-dashboard-sidebar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-/* Input focus effect */
-.user-form-container input:focus,
-.user-form-container select:focus {
-    outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+.hr-dashboard-sidebar a:hover {
+  background: rgb(63, 62, 62);
 }
 
-/* Submit Button Styling */
-.user-form-container button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    transition: background-color 0.3s ease;
+.hr-dashboard-sidebar .active-link {
+  background: rgb(63, 62, 62);
+  font-weight: bold;
 }
 
-.user-form-container button[type="submit"]:hover {
-    background-color: #45a049;
+.hr-dashboard-main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  height: 100vh;
+  flex-grow: 1;
+  padding: 20px;
 }
 
-/* Cancel Button Styling */
-.user-form-container button[type="button"] {
-    background-color: #f44336;
-    color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-.user-form-container button[type="button"]:hover {
-    background-color: #e53935;
-}
-
-/* Styling the User List Table */
-.user-list-container {
-    margin-top: 40px;
-    width: 100%;
-    overflow-x: auto;
-}
-
-.user-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.user-table th,
-.user-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.user-table th {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.user-table td {
-    background-color: #f9f9f9;
-}
-
-.user-table tr:hover td {
-    background-color: #f1f1f1;
-}
-
-.user-table button {
-    padding: 8px 16px;
-    margin-right: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-}
-
-.user-table button:hover {
-    background-color: #45a049;
+.hr-dashboard-sidebar a span {
+  margin-left: 6px;
 }

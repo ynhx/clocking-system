@@ -1,0 +1,233 @@
+body {
+  overflow-x: hidden;
+}
+
+.whole-overview-wrapper {
+  padding-bottom: 100px;
+  max-width: 95%;
+  overflow-x: hidden;
+}
+
+.hr-dashboard-overview-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.overview-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.overview-date-text {
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
+  margin-left: 2%;
+}
+
+.overview-header h1 {
+  font-size: 3em;
+}
+
+.overview-header h2 {
+  padding-bottom: 20px;
+}
+
+.overview-clock-in-details {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.overview-clock-in-reports {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  gap: 15px;
+}
+
+.hr-clock-in-summary {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: left;
+}
+
+.recently-clocked-in,
+.earliest-clock-ins {
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  background: rgb(245, 243, 243);
+  text-align: center;
+}
+
+.recently-clocked-in p,
+.earliest-clock-ins p {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.recently-clocked-in ul,
+.earliest-clock-ins ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.recently-clocked-in li,
+.earliest-clock-ins li {
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.late-clock-in-status {
+  color: red;
+  font-weight: bold;
+}
+
+.early-clock-in-status {
+  color: green;
+  font-weight: bold;
+}
+
+.attendance-container {
+  background: rgb(245, 243, 243);
+  padding: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.attendance-charts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.circular-progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.attendance-container h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.attendance-container p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.hr-summary-section {
+  padding: 15px;
+  background: rgb(247, 245, 245);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hr-summary-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 22px;
+}
+
+.hr-summary-section ol {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.hr-summary-section li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.duration-text {
+  font-weight: bold;
+  color: red;
+}
+
+.good-duration {
+  font-weight: bold;
+  color: green;
+}
+
+.students-overview-clocking-records {
+  padding-top: 35px;
+}
+
+.supervisors-overview-clocking-records {
+  padding-top: 35px;
+}
+
+.overview-clocking-records-header h3 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.overview-clocking-records-table {
+  overflow-x: auto;
+  background: rgb(245, 243, 243);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.overview-clocking-records-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.overview-clocking-records-table th,
+.overview-clocking-records-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.overview-clocking-records-table th {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+.overview-clocking-records-table tr:hover {
+  background: #f9f9f9;
+}
+
+.overview-clocking-records-table td {
+  color: #555;
+}
+
+.status-cell {
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.status-cell.on-time {
+  color: green;
+}
+
+.status-cell.late {
+  color: orange;
+}
+
+.status-cell.not-in {
+  color:red;
+}
