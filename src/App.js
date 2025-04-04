@@ -19,6 +19,10 @@ function App() {
         <Route path="/hr-login" element={<HRLogin />}/>
         <Route path="/user-dashboard" element={<UserDashboard />}/>
         <Route path="/account-found" element={<AccountFound />}/>
+        <Route path="/hr-dashboard" element={<HRDashboard />}>
+          <Route index element={<Overview />} />
+          <Route path="users" element={<UsersList />} />
+        </Route>
       </Routes>
     </Router>
   );
