@@ -18,6 +18,7 @@ function App() {
         <Route path="/user-dashboard" element={<UserDashboard />}/>
         <Route path="/hr-dashboard" element={<HRDashboard />}/>
         <Route path="/account-found" element={<AccountFound />}/>
+        
       </Routes>
     </Router>
   );

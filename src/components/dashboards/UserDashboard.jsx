@@ -1,41 +1,70 @@
-import React, { useState, useRef, useEffect } from 'react';
-import './UserDashboard.css'; 
+import React, { useState } from "react";
+import "./UserDashboard.css";
 
-const Dropdown = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const dropdownRef = useRef(null);
+const UserDashboard = () => {
+  const [user, setUser] = useState({ name: "John Doe" });
 
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
-    };
+  // Logout handler
+  const handleLogout = () => {
+    alert("Logged out successfully!");
+  };
 
-    const handleClickOutside = (event) => {
-        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setIsOpen(false);
-        }
-    };
+  return (
+    <div className="dashboard-container">
+      {/* Sidebar */}
+      <nav className="sidebar">
+        <h2>Clocking System</h2>
+        <ul>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/clocking">Clocking</a></li>
+          <li><a href="/attendance">Attendance</a></li>
+          <li><a href="/reports">Reports</a></li>
+          <li><button className="logout-btn" onClick={handleLogout}>Logout</button></li>
+        </ul>
+      </nav>
 
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
+      {/* Main Content */}
+      <div className="user-dashboard">
+        <header className="dashboard-header">
+          <h1>Welcome, {user.name}</h1>
+        </header>
 
-    return (
-        <div className="dropdown" ref={dropdownRef}>
-            <button className="dropbtn" onClick={toggleDropdown}>
-                User ▼
-            </button>
-            {isOpen && (
-                <div className="dropdown-content">
-                    <a href="#">Profile</a>
-                    <a href="#">Status</a>
-                    <a href="#">Logout</a>
-                </div>
-            )}
-        </div>
-    );
+        <section className="clocking-section">
+          <h2>Clocking</h2>
+          <button className="clock-in-btn">Clock In</button>
+          <button className="clock-out-btn">Clock Out</button>
+        </section>
+
+        <section className="attendance-history">
+          <h2>Attendance History</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Clock In</th>
+                <th>Clock Out</th>
+                <th>Total Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023-10-01</td>
+                <td>09:00 AM</td>
+                <td>05:00 PM</td>
+                <td>8 hrs</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section className="statistics">
+          <h2>Statistics</h2>
+          <p>Total Hours This Week: 40 hrs</p>
+          <p>Total Hours This Month: 160 hrs</p>
+        </section>
+      </div>
+    </div>
+  );
 };
 
-export default Dropdown;
+export default UserDashboard;
