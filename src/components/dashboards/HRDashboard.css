@@ -1,27 +1,4 @@
-/*.hr-dashboard-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
-.add-user-button {
-    background-color: #305331;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.add-user-button:hover {
-    background-color: #28412a;
-    transform: scale(1.05);
-}*/
-/* General Container for the Dashboard */
-/* Styling for Admin Dashboard title */
 .admin-title {
     text-align: center;
     font-size: 2.5rem;

@@ -13,12 +13,10 @@ const UserDashboard = () => {
     <div className="dashboard-container">
       {/* Sidebar */}
       <nav className="sidebar">
-        <h2>Clocking System</h2>
+        <h2>Clocking System</h2> 
         <ul>
-          <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="/clocking">Clocking</a></li>
-          <li><a href="/attendance">Attendance</a></li>
-          <li><a href="/reports">Reports</a></li>
+          <li><a href="/clocking">Dashboard</a></li>
+           <li><a href="/attendance">Weekly Attendance</a></li>
           <li><button className="logout-btn" onClick={handleLogout}>Logout</button></li>
         </ul>
       </nav>
