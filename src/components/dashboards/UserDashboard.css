@@ -4,15 +4,18 @@
    padding: 20px;
    max-width: 1200px;
    margin: 0 auto;
-   background-color: #ffffff; /* White background for the dashboard */
+   background-color: #ffffff;
+   /* White background for the dashboard */
    border-radius: 8px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+   /* Light shadow for depth */
 }
 
 /* Header */
 .dashboard-header {
    display: flex;
-   justify-content: space-between; /* Align header content */
+   justify-content: space-between;
+   /* Align header content */
    align-items: center;
    margin-bottom: 20px;
 }
@@ -20,12 +23,14 @@
 .dashboard-header h1 {
    font-size: 32px;
    font-weight: bold;
-   color: #333; /* Dark text for good contrast */
+   color: #333;
+   /* Dark text for good contrast */
 }
 
 /* Logout Button */
 .logout-btn {
-   background-color: #808080; /* Grey background */
+   background-color: #808080;
+   /* Grey background */
    color: white;
    border: none;
    padding: 10px 20px;
@@ -36,11 +41,13 @@
 }
 
 .logout-btn:hover {
-   background-color: #6c6c6c; /* Darker grey on hover */
+   background-color: #6c6c6c;
+   /* Darker grey on hover */
 }
 
 .logout-btn:active {
-   background-color: #555; /* Even darker grey when clicked */
+   background-color: #555;
+   /* Even darker grey when clicked */
 }
 
 /* Clocking Section */
@@ -57,7 +64,8 @@
 
 .clock-in-btn,
 .clock-out-btn {
-   background-color: #808080; /* Grey background for buttons */
+   background-color: #808080;
+   /* Grey background for buttons */
    color: white;
    border: none;
    padding: 12px 20px;
@@ -70,12 +78,14 @@
 
 .clock-in-btn:hover,
 .clock-out-btn:hover {
-   background-color: rgb(167, 8, 138); /* Darker grey on hover */
+   background-color: rgb(167, 8, 138);
+   /* Darker grey on hover */
 }
 
 .clock-in-btn:active,
 .clock-out-btn:active {
-   background-color: #555; /* Even darker grey when clicked */
+   background-color: #555;
+   /* Even darker grey when clicked */
 }
 
 /* Attendance History Table */
@@ -92,27 +102,33 @@
 .attendance-history table {
    width: 100%;
    border-collapse: collapse;
-   background-color: #fff; /* White background for the table */
+   background-color: #fff;
+   /* White background for the table */
    border-radius: 8px;
    overflow: hidden;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for the table */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   /* Light shadow for the table */
 }
 
 .attendance-history th,
 .attendance-history td {
    padding: 12px;
    text-align: center;
-   border-bottom: 1px solid #ddd; /* Light grey borders */
+   border-bottom: 1px solid #ddd;
+   /* Light grey borders */
 }
 
 .attendance-history th {
-   background-color: #f9f9f9; /* Light grey background for headers */
-   color: #555; /* Slightly darker grey for text */
+   background-color: #f9f9f9;
+   /* Light grey background for headers */
+   color: #555;
+   /* Slightly darker grey for text */
    font-weight: bold;
 }
 
 .attendance-history tr:hover {
-   background-color: #f4f4f4; /* Light grey on hover */
+   background-color: #f4f4f4;
+   /* Light grey on hover */
 }
 
 .attendance-history tbody tr:last-child td {
@@ -140,73 +156,75 @@
 /* Responsive Design */
 @media (max-width: 768px) {
    .user-dashboard {
-       padding: 15px;
+      padding: 15px;
    }
 
    .clock-in-btn,
    .clock-out-btn {
-       padding: 10px 18px;
+      padding: 10px 18px;
    }
 
    .attendance-history table,
    .statistics {
-       font-size: 14px;
+      font-size: 14px;
    }
 
    .statistics h2 {
-       font-size: 22px;
+      font-size: 22px;
    }
 }
+
 .dashboard-container {
    display: flex;
    height: 100vh;
- }
- 
- .sidebar {
+}
+
+.sidebar {
    width: 250px;
    background-color: rgb(106, 109, 106);
    color: white;
    padding: 20px;
    height: 100vh;
- }
- 
- .sidebar h2 {
+}
+
+.sidebar h2 {
    text-align: center;
- }
- 
- .sidebar ul {
+}
+
+.sidebar ul {
    list-style: none;
    padding: 0;
- }
- 
- .sidebar ul li {
+}
+
+.sidebar ul li {
    padding: 15px;
    text-align: center;
- }
- 
- .sidebar ul li a {
+}
+
+.sidebar ul li a {
    color: white;
    text-decoration: none;
    display: block;
- }
- 
- .sidebar ul li a:hover {
+}
+
+.sidebar ul li a:hover {
    background-color: #555;
    padding: 10px;
- }
- 
- .logout-btn {
+}
+
+.logout-btn {
    width: 100%;
    padding: 10px;
    background-color: rgb(87, 4, 65);
    color: white;
    border: none;
    cursor: pointer;
- }
- 
+}
+
 .clock-in-btn,
 .clock-out-btn {
-   background-color: rgb(175, 76, 149); /* Green background for buttons */
+   background-color: rgb(175, 76, 149);
+   /* Green background for buttons */
    color: white;
    border: none;
    padding: 12px 20px;
@@ -219,10 +237,54 @@
 
 .clock-in-btn:hover,
 .clock-out-btn:hover {
-   background-color: rgb(160, 69, 149); /* Darker green on hover */
+   background-color: rgb(160, 69, 149);
+   /* Darker green on hover */
 }
 
 .clock-in-btn:active,
 .clock-out-btn:active {
-   background-color: rgb(142, 56, 118); /* Even darker green when clicked */
+   background-color: rgb(142, 56, 118);
+   /* Even darker green when clicked */
+}
+
+.clock-success-message {
+   color: #155724;
+   padding: 10px;
+   border-radius: 5px;
+   margin-bottom: 10px;
+}
+
+.clock-error-message {
+   color: #721c24;
+   padding: 10px;
+   border-radius: 5px;
+   margin-bottom: 10px;
+}
+
+.loading-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(255, 255, 255, 0.8);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+}
+
+.loader {
+   border: 8px solid #f3f3f3;
+   border-top: 8px solid rgb(122, 36, 101);
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
 }

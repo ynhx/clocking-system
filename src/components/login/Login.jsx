@@ -11,6 +11,8 @@ const Login = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const [user, setUser] = useState(null);
+    const [attendanceHistory, setAttendanceHistory] = useState([]);
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -27,8 +29,20 @@ const Login = () => {
 
             if (response.data.firstLogin) {
                 navigate('/setup-password', { state: { email, role: response.data.role } });
+                const userId = response.data.userId;
+                localStorage.setItem('userId', userId);
+                localStorage.setItem('role', response.data.role);
+                localStorage.setItem('name', response.data.email);
+
+                setAttendanceHistory(response.data.attendanceHistory);
             } else {
+                const userId = response.data.userId;
+                localStorage.setItem('userId', userId);
+                localStorage.setItem('role', response.data.role);
+                localStorage.setItem('name', response.data.email);
                 navigate('/user-dashboard');
+                
+                setAttendanceHistory(response.data.attendanceHistory);
             }
         } catch (err) {
             console.error('Login error:', err);
@@ -67,20 +81,20 @@ const Login = () => {
             <div className="inputs">
                 <div className="input">
                     <i className="fas fa-envelope"></i>
-                    <input 
-                        type="email" 
-                        value={email} 
-                        onChange={(e) => setEmail(e.target.value)} 
-                        placeholder="email address" 
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="email address"
                     />
                 </div>
                 <div className="input">
                     <i className="fas fa-lock"></i>
-                    <input 
-                        type="password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        placeholder="password" 
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="password"
                     />
                     <span className="tooltip-icon">
                         <i className="fas fa-question-circle"></i>
