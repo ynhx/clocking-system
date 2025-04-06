@@ -7,6 +7,7 @@ import HRDashboard from './components/dashboards/HRDashboard';
 import AccountFound from './components/reset-password/AccountFound';
 import Overview from './components/dashboards/hr-dashboard-comps/Overview';
 import UsersList from './components/dashboards/hr-dashboard-comps/UsersList';
+import SetupPassword from './components/login/SetupPassword';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<Overview />} />
           <Route path="users" element={<UsersList />} />
         </Route>
+        <Route path="setup-password" element={<SetupPassword />}/>
       </Routes>
     </Router>
     //

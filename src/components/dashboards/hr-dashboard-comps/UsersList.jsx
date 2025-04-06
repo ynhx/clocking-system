@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './UsersList.css';
 
 const UsersList = () => {
-    const [users, setUsers] = useState([
-        { email: 'john.doe@example.com', studentNumber: 'S12345', role: 'Student' },
-        { email: 'jane.smith@example.com', studentNumber: 'S67890', role: 'Supervisor' }
-    ]);
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const response = await axios.get('http://localhost:5000/api/myRoutes/all-users');
+                setUsers(response.data);
+            } catch (error) {
+                console.error('Error fetching users:', error);
+            }
+        };
+        fetchUsers();
+    }, []);
 
     const [newUser, setNewUser] = useState({
         email: '',
@@ -23,33 +33,42 @@ const UsersList = () => {
         });
     };
 
-    const handleAddUser = (e) => {
+    const handleAddUser = async (e) => {
         e.preventDefault();
         if (!newUser.email || !newUser.studentNumber || !newUser.role) {
             alert("All fields are required!");
             return;
         }
 
-        if (newUser.id) {
-            const updatedUsers = users.map(user =>
-                user.id === newUser.id ? newUser : user
-            );
-            setUsers(updatedUsers);
-        } else {
-            setUsers([...users, { ...newUser, id: Date.now() }]);
-        }
+        try {
+            let endpoint;
+            if (newUser.role === 'Student') {
+                endpoint = 'http://localhost:5000/api/myRoutes/students';
+            } else if (newUser.role === 'Supervisor') {
+                endpoint = 'http://localhost:5000/api/myRoutes/supervisors';
+            } else {
+                endpoint = 'http://localhost:5000/api/myRoutes/hr';
+            }
 
-        setNewUser({
-            email: '',
-            studentNumber: '',
-            role: 'Student'
-        });
-        setIsFormVisible(false);
+            const response = await axios.post(endpoint, newUser);
+            console.log('User added:', response.data);
+
+            setUsers([...users, { ...newUser, id: response.data.id }]);
+            setNewUser({
+                email: '',
+                studentNumber: '',
+                role: 'Student'
+            });
+            setIsFormVisible(false);
+        } catch (error) {
+            console.error('Error adding user:', error);
+            alert('There was an error adding the user. Please try again.');
+        }
     };
 
     const handleEditUser = (index) => {
         const userToEdit = users[index];
-        setNewUser({ ...userToEdit, id: userToEdit.id }); // Ensure the ID is preserved
+        setNewUser({ ...userToEdit, id: userToEdit.id });
         setIsFormVisible(true);
     };
 
@@ -112,20 +131,20 @@ const UsersList = () => {
                     <thead>
                         <tr>
                             <th>Email</th>
-                            <th>Student Number</th>
+                            <th>User Number</th>
                             <th>Role</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {users.map((user, index) => (
-                            <tr key={user.id}>
+                        {users.map((user) => (
+                            <tr key={user.studentNumber}>
                                 <td>{user.email}</td>
                                 <td>{user.studentNumber}</td>
                                 <td>{user.role}</td>
                                 <td>
-                                    <button onClick={() => handleEditUser(index)}>Edit</button>
-                                    <button onClick={() => handleDeleteUser(index)}>Delete</button>
+                                    <button onClick={() => handleEditUser(user.studentNumber)}>Edit</button>
+                                    <button onClick={() => handleDeleteUser(user.studentNumber)}>Delete</button>
                                 </td>
                             </tr>
                         ))}

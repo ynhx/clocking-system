@@ -2,22 +2,50 @@ import React, { useState } from 'react';
 import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import axios from 'axios';
 
 const Login = () => {
-
-    const [dropdownOpen, setDropdownOpen] = useState(false);
     const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
     };
 
-    const handleLogin = () => {
-        navigate('/user-dashboard');
+    const handleLogin = async () => {
+        setError('');
+        setLoading(true);
+        try {
+            const response = await axios.post('http://localhost:5000/api/myRoutes/login', {
+                email,
+                password
+            });
+
+            if (response.data.firstLogin) {
+                navigate('/setup-password', { state: { email, role: response.data.role } });
+            } else {
+                navigate('/user-dashboard');
+            }
+        } catch (err) {
+            console.error('Login error:', err);
+            setError(err.response?.data?.error || 'Login failed');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
         <div className="container">
+            {loading && (
+                <div className="loading-overlay">
+                    <div className="loader"></div>
+                    <p>Loading...</p>
+                </div>
+            )}
             <div className="profile-container">
                 <div className="profile-icon" onClick={toggleDropdown}>
                     <i className="fas fa-user-circle"></i>
@@ -39,13 +67,28 @@ const Login = () => {
             <div className="inputs">
                 <div className="input">
                     <i className="fas fa-envelope"></i>
-                    <input type="email" name="email" placeholder="email address" />
+                    <input 
+                        type="email" 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)} 
+                        placeholder="email address" 
+                    />
                 </div>
                 <div className="input">
                     <i className="fas fa-lock"></i>
-                    <input type="password" name="password" placeholder="password" />
+                    <input 
+                        type="password" 
+                        value={password} 
+                        onChange={(e) => setPassword(e.target.value)} 
+                        placeholder="password" 
+                    />
+                    <span className="tooltip-icon">
+                        <i className="fas fa-question-circle"></i>
+                        <span className="tooltip-text">Use the password user if this is your first time logging in.</span>
+                    </span>
                 </div>
             </div>
+            {error && <div className="login-error-message">{error}</div>}
             <div className="submit-container">
                 <button type="submit" className="login-button" onClick={handleLogin}>Log in</button>
             </div>
@@ -53,9 +96,7 @@ const Login = () => {
                 <Link to="/reset-password">Forgot password?</Link>
             </div>
         </div>
-    )
+    );
 }
 
 export default Login;
-
-
